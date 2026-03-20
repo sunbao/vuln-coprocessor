@@ -2,68 +2,81 @@
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Repository](https://img.shields.io/badge/GitHub-sunbao%2Fvuln--coprocessor-181717?logo=github)](https://github.com/sunbao/vuln-coprocessor.git)
+[![Model Family](https://img.shields.io/badge/Base%20Model-Qwen2.5--7B--Instruct-0F766E)](#release-snapshot)
+[![Training](https://img.shields.io/badge/Training-LoRA-C2410C)](#train-a-lora-adapter)
 
-A domain-focused vulnerability explanation coprocessor for generating grounded risk analysis and remediation guidance from structured vulnerability facts.
+`vuln-coprocessor` is a narrow-domain vulnerability explanation model project.
+It turns structured vulnerability facts into grounded, operator-facing outputs such as risk interpretation, remediation guidance, and upgrade recommendations.
 
-Repository:
+This repository is intentionally packaged like a small model release rather than a generic experiment folder.
+It includes public dataset snapshots, LoRA training code, evaluation scripts, TensorBoard monitoring, and release-oriented documentation.
 
-- `https://github.com/sunbao/vuln-coprocessor.git`
+## At A Glance
 
-This repository is organized like a small model release project rather than a generic training sandbox.
-It contains:
+| Item | Current State |
+| --- | --- |
+| Model name | `vuln-coprocessor` |
+| Base model family | `Qwen2.5-7B-Instruct` |
+| Fine-tuning method | `LoRA` |
+| Python runtime | `3.11` |
+| Public data snapshots | `data/processed/` |
+| V1 adapter | trained locally, not published in this repo |
+| V2 adapter | training and validation in progress |
+| Public adapter release | not finalized yet |
 
-- public training data snapshots
-- LoRA training code
-- single-sample inference tooling
-- release-oriented specs
-- monitoring and evaluation guidance
-- GitHub-ready community templates and CI smoke checks
+Quick links:
 
-## What This Model Is
+- repository: `https://github.com/sunbao/vuln-coprocessor.git`
+- model card: [`MODEL_CARD.md`](MODEL_CARD.md)
+- capability boundary: [`MODEL_CAPABILITY_SPEC.md`](specs/MODEL_CAPABILITY_SPEC.md)
+- training rules: [`TRAINING_SPEC.md`](specs/TRAINING_SPEC.md)
+- TensorBoard guide: [`TENSORBOARD_OBSERVATION_GUIDE.md`](specs/TENSORBOARD_OBSERVATION_GUIDE.md)
+- release gate: [`RELEASE_CHECKLIST.md`](RELEASE_CHECKLIST.md)
 
-`vuln-coprocessor` is a narrow-domain model project for post-scan vulnerability explanation.
+## What This Project Does
+
+The training target is post-scan vulnerability explanation, not raw vulnerability discovery.
 
 Given structured facts such as:
 
 - component name
 - component version
 - vulnerability ID
-- risk level
+- severity or risk level
 - recommended version
 - matching evidence
 
-the model is trained to produce:
+the model is expected to produce:
 
-- vulnerability explanation
-- risk interpretation
+- a short explanation of why the component is affected
+- a grounded view of current risk
 - remediation guidance
-- upgrade recommendation
+- an explicit upgrade recommendation
 
-This is an explanation layer, not a vulnerability scanner.
+In practical terms, this project is an explanation layer that sits after matching and inventory logic.
+It is designed to make vulnerability records more understandable and more actionable for engineers and operators.
 
-## Release Status
+## Release Snapshot
 
-Current repository status:
+This repository currently represents a public-ready code and data release, with model weights still gated by validation.
 
-- base model family: `Qwen2.5-7B-Instruct`
-- training method: `LoRA`
-- public dataset snapshots: available under `data/processed/`
-- V1 local adapter: trained locally, not committed to the public repo
-- V2 training: in progress
-- public adapter release: not finalized yet
-
-Release workflow:
-
-- repository publishing checklist: [`RELEASE_CHECKLIST.md`](RELEASE_CHECKLIST.md)
-- project change history: [`CHANGELOG.md`](CHANGELOG.md)
+- code and documentation: publishable now
+- processed training data snapshots: publishable now
+- local checkpoints and experiment logs: intentionally excluded from Git
+- validated adapter weights: planned for a later release once V2 passes evaluation
 
 Recommended public release shape:
 
 - code in GitHub
-- public dataset snapshots in GitHub
-- LoRA adapter weights in GitHub Releases or a model registry
+- approved dataset snapshots in GitHub
+- validated LoRA adapter weights in GitHub Releases or a model registry
 
-## Capabilities
+Project tracking:
+
+- repository publishing checklist: [`RELEASE_CHECKLIST.md`](RELEASE_CHECKLIST.md)
+- project change history: [`CHANGELOG.md`](CHANGELOG.md)
+
+## Capability Boundary
 
 The target capability set is:
 
