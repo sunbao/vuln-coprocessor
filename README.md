@@ -31,6 +31,7 @@ Quick links:
 - capability boundary: [`MODEL_CAPABILITY_SPEC.md`](specs/MODEL_CAPABILITY_SPEC.md)
 - training rules: [`TRAINING_SPEC.md`](specs/TRAINING_SPEC.md)
 - TensorBoard guide: [`TENSORBOARD_OBSERVATION_GUIDE.md`](specs/TENSORBOARD_OBSERVATION_GUIDE.md)
+- tmux runbook: [`TMUX_TRAINING_RUNBOOK.md`](specs/TMUX_TRAINING_RUNBOOK.md)
 - release gate: [`RELEASE_CHECKLIST.md`](RELEASE_CHECKLIST.md)
 
 ## What This Project Does
@@ -176,6 +177,12 @@ Useful options:
 - `--target_modules q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj`
 - `--report_to tensorboard`
 
+Recommended long-running local launch method:
+
+```bash
+scripts/run_v2_tmux.sh start
+```
+
 ## Run Inference
 
 When an adapter is available, run a single-sample inference like this:
@@ -207,6 +214,7 @@ If you are viewing from another machine on the LAN, use the training server IP i
 TensorBoard operator guide:
 
 - [`TENSORBOARD_OBSERVATION_GUIDE.md`](specs/TENSORBOARD_OBSERVATION_GUIDE.md)
+- [`TMUX_TRAINING_RUNBOOK.md`](specs/TMUX_TRAINING_RUNBOOK.md)
 
 ## Evaluate And Validate
 
@@ -295,6 +303,7 @@ Publishing rules:
 - [`TRAINING_SPEC.md`](specs/TRAINING_SPEC.md): training and evaluation rules
 - [`MODEL_CAPABILITY_SPEC.md`](specs/MODEL_CAPABILITY_SPEC.md): capability boundary
 - [`TENSORBOARD_OBSERVATION_GUIDE.md`](specs/TENSORBOARD_OBSERVATION_GUIDE.md): live monitoring guide
+- [`TMUX_TRAINING_RUNBOOK.md`](specs/TMUX_TRAINING_RUNBOOK.md): persistent local training runbook
 - [`GITHUB_PUBLISHING_GUIDE.md`](specs/GITHUB_PUBLISHING_GUIDE.md): public release guide
 
 ## Notes

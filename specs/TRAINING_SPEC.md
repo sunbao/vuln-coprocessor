@@ -10,6 +10,7 @@ Use this file for:
 - training inputs and outputs
 - data and evaluation contracts
 - version control rules for model iterations
+- stable run orchestration rules
 
 For the stable product goal, capability boundary, and non-goals of the trained model, see:
 
@@ -17,6 +18,10 @@ For the stable product goal, capability boundary, and non-goals of the trained m
 - [`TENSORBOARD_OBSERVATION_GUIDE.md`](TENSORBOARD_OBSERVATION_GUIDE.md)
 
 Use `artifacts/` for run-specific notes and observations.
+
+For the stable local run method, see:
+
+- [`TMUX_TRAINING_RUNBOOK.md`](TMUX_TRAINING_RUNBOOK.md)
 
 ## Objective
 
@@ -122,6 +127,22 @@ Training runs that need graphical tracking should use:
 
 TensorBoard event files may be written under the training output directory root, commonly in `runs/`.
 Point TensorBoard to the training `output_dir` root unless a run is known to use a different event path.
+
+## Local Run Method
+
+Long-running local training must use a session manager that survives shell detachment.
+
+For this repository, the default local method is:
+
+- `tmux`
+
+The canonical operational entrypoint is:
+
+```bash
+scripts/run_v2_tmux.sh start
+```
+
+Do not rely on transient shell sessions for multi-hour training.
 
 ## Repository Responsibilities
 
