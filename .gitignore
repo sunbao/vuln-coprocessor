@@ -1,0 +1,16 @@
+.venv/
+.venv311/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+artifacts/
+exports/
+cache/
+checkpoints/
+
+*.log

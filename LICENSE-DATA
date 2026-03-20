@@ -1,0 +1,9 @@
+Data License Notice
+
+The public dataset snapshots distributed in this repository under `data/processed/`
+are made available under the Apache License, Version 2.0, unless a more specific
+notice is attached to an individual dataset file or release artifact.
+
+Users are responsible for reviewing dataset content before downstream production
+use and for complying with any third-party rights that may exist outside this
+repository.

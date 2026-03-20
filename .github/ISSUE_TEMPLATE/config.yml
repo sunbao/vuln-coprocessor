@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Project Documentation
+    url: https://github.com/sunbao/vuln-coprocessor
+    about: Read the README, model card, and repository specs before opening an issue.

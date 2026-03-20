@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: vuln-coprocessor
+message: "If you use this repository, please cite the project metadata below."
+type: software
+authors:
+  - family-names: Contributors
+    given-names: vuln-coprocessor
+repository-code: "https://github.com/sunbao/vuln-coprocessor.git"
+license: Apache-2.0
+abstract: "A domain-focused vulnerability explanation coprocessor for generating grounded risk analysis and remediation guidance from structured vulnerability facts."
+keywords:
+  - vulnerability
+  - llm
+  - lora
+  - remediation
+  - security
+  - supply-chain

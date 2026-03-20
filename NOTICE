@@ -1,0 +1,9 @@
+vuln-coprocessor
+Copyright 2026 vuln-coprocessor contributors
+
+This repository is distributed under the Apache License, Version 2.0.
+
+This project fine-tunes and evaluates adapters on top of the Qwen2.5-7B-Instruct
+base model. Users of released adapters or merged artifacts must also comply with
+the license terms of the upstream base model and any separately released data
+license notices.

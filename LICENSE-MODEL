@@ -1,0 +1,13 @@
+Model Artifact License Notice
+
+Unless otherwise stated in a specific release, LoRA adapters and other model
+artifacts published from this repository are intended to be released under the
+Apache License, Version 2.0.
+
+Important:
+
+1. Adapter and merged-model use must remain compatible with the license terms of
+   the upstream base model.
+2. This repository currently uses Qwen2.5-7B-Instruct as the base model family.
+3. Users of released adapters should review both this repository license and the
+   upstream base model license before redistribution or production deployment.

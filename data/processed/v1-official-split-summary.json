@@ -1,0 +1,10 @@
+{
+  "input_file": "/data-2/vuln-coprocessor/data/processed/v1-pilot.jsonl",
+  "output_dir": "/data-2/vuln-coprocessor/data/processed",
+  "prefix": "v1-official",
+  "counts": {
+    "train": 2000,
+    "validation": 200,
+    "test": 200
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "instruction": "请基于给定事实，说明漏洞风险、命中原因、处理建议，并给出是否建议升级的结论。不要编造未提供的事实。",
+  "sample_id": "demo-npm-lodash-cve-2020-8203",
+  "task": "vulnerability_explanation",
+  "language": "zh-CN",
+  "input": {
+    "ecosystem": "npm",
+    "component_name": "lodash",
+    "component_version": "4.17.5",
+    "vulnerability_id": "CVE-2020-8203",
+    "risk_level": "高危",
+    "recommended_version": "4.17.21",
+    "latest_version": "4.17.21",
+    "component_language": "JavaScript",
+    "evidence": {
+      "source_mode": "example",
+      "source_tables": [
+        "demo.component",
+        "demo.vulnerability"
+      ],
+      "cpematch_candidates": [
+        {
+          "cveId": "CVE-2020-8203",
+          "vendor": "lodash",
+          "product": "lodash",
+          "version": "*",
+          "versionEndExcluding": "4.17.20"
+        }
+      ]
+    }
+  }
+}

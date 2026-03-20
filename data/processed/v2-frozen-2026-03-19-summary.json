@@ -1,0 +1,73 @@
+{
+  "prefix": "v2-frozen-2026-03-19",
+  "input_files": [
+    "data/processed/v2-live-154-online-pilot.jsonl",
+    "data/processed/v2-live-154-online-batch-01.jsonl"
+  ],
+  "validation_target": 500,
+  "validation_splits": [
+    "test",
+    "validation"
+  ],
+  "train_splits": [
+    "train"
+  ],
+  "input_counts_by_split": {
+    "train": 4662,
+    "validation": 501,
+    "test": 837
+  },
+  "unique_counts_by_split": {
+    "train": 4590,
+    "validation": 492,
+    "test": 826
+  },
+  "duplicate_counts_by_split": {
+    "train": 72,
+    "test": 11,
+    "validation": 9
+  },
+  "validation_pool_size": 1318,
+  "frozen_validation_count": 500,
+  "train_count": 4590,
+  "counts_by_validation_ecosystem": {
+    "maven": 365,
+    "npm": 117,
+    "yarn": 18
+  },
+  "counts_by_validation_risk_level": {
+    "高危": 219,
+    "低危": 22,
+    "中危": 184,
+    "超危": 75
+  },
+  "counts_by_validation_source": {
+    "v2-live-154-online-pilot": 87,
+    "v2-live-154-online-batch-01": 413
+  },
+  "validation_file": "data/processed/v2-frozen-2026-03-19-validation.jsonl",
+  "train_file": "data/processed/v2-frozen-2026-03-19-train.jsonl",
+  "validation_manifest_file": "data/processed/v2-frozen-2026-03-19-validation-manifest.json",
+  "validation_sample_id_preview": [
+    "maven-1654417091739430914-1654431951743266818-CVE-2022-45868",
+    "maven-1654799889788764161-1654844331224662017-CVE-2020-8908",
+    "maven-1654799889788764161-1654844331526651905-CVE-2022-25647",
+    "maven-1654799916124798978-1654815702637805570-CVE-2022-45868",
+    "maven-1655468709058588673-1655468733972754434-CVE-2021-44832",
+    "maven-1655468709058588673-1655468735457538050-CVE-2022-45868",
+    "maven-1655468709058588673-1655468736346730497-CVE-2020-8908",
+    "maven-1655468709058588673-1655468736720023553-CVE-2010-0684",
+    "maven-1655468709058588673-1655468736720023553-CVE-2011-4905",
+    "maven-1655468709058588673-1655468736720023553-CVE-2012-5784",
+    "maven-1655468709058588673-1655468736720023553-CVE-2012-6551",
+    "maven-1655468709058588673-1655468736720023553-CVE-2013-1879",
+    "maven-1655468709058588673-1655468736720023553-CVE-2013-1880",
+    "maven-1655468709058588673-1655468736720023553-CVE-2013-3060",
+    "maven-1655468709058588673-1655468736720023553-CVE-2018-11775",
+    "maven-1655468709058588673-1655468736766160898-CVE-2013-6398",
+    "maven-1655468709058588673-1655468736766160898-CVE-2015-3252",
+    "maven-1655468709058588673-1655468736766160898-CVE-2019-17562",
+    "maven-1655468709058588673-1655468736803909633-CVE-2015-7520",
+    "maven-1655468709058588673-1655468736803909633-CVE-2020-11976"
+  ]
+}
