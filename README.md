@@ -21,7 +21,7 @@ It includes public dataset snapshots, LoRA training code, evaluation scripts, Te
 | Python runtime | `3.11` |
 | Public data snapshots | `data/processed/` |
 | V1 adapter | trained locally, not published in this repo |
-| V2 adapter | training and validation in progress |
+| V2 adapter | training complete, promotion still gated by validation review |
 | Public adapter release | not finalized yet |
 
 Quick links:
@@ -32,6 +32,7 @@ Quick links:
 - training rules: [`TRAINING_SPEC.md`](specs/TRAINING_SPEC.md)
 - TensorBoard guide: [`TENSORBOARD_OBSERVATION_GUIDE.md`](specs/TENSORBOARD_OBSERVATION_GUIDE.md)
 - tmux runbook: [`TMUX_TRAINING_RUNBOOK.md`](specs/TMUX_TRAINING_RUNBOOK.md)
+- latest validation report: [`V2_VALIDATION_2026-03-20.md`](V2_VALIDATION_2026-03-20.md)
 - release gate: [`RELEASE_CHECKLIST.md`](RELEASE_CHECKLIST.md)
 
 ## What This Project Does
@@ -64,7 +65,7 @@ This repository currently represents a public-ready code and data release, with 
 - code and documentation: publishable now
 - processed training data snapshots: publishable now
 - local checkpoints and experiment logs: intentionally excluded from Git
-- validated adapter weights: planned for a later release once V2 passes evaluation
+- validated adapter weights: planned for a later release once V2 passes prediction-level validation
 
 Recommended public release shape:
 
@@ -224,6 +225,7 @@ This repository includes:
 
 - validation inference tooling in `scripts/validate_lora.py`
 - frozen V2 validation data in `data/processed/v2-frozen-2026-03-19-validation.jsonl`
+- repository-tracked V2 validation status in [`V2_VALIDATION_2026-03-20.md`](V2_VALIDATION_2026-03-20.md)
 
 Do not accept a release based on training loss alone.
 

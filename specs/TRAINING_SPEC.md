@@ -116,6 +116,17 @@ Every accepted training run must record:
 - checkpoint path
 - log path
 - final metrics
+- validation report path committed to the repository
+
+## Post-Train Validation Gate
+
+After each training round:
+
+- run validation on the frozen evaluation set
+- record the validation result in a repository-tracked report
+- push the report to GitHub before starting the next training round
+
+Do not treat the next version as valid process if the previous version has training artifacts but no committed validation result.
 
 ## Monitoring
 

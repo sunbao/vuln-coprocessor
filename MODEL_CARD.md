@@ -104,8 +104,9 @@ Current state:
 - code: public-ready
 - public datasets: available in repo
 - V1 local adapter: trained locally
-- V2 training: in progress
-- public adapter artifact: pending validation
+- V2 training: complete
+- V2 validation report: [`V2_VALIDATION_2026-03-20.md`](V2_VALIDATION_2026-03-20.md)
+- public adapter artifact: still pending prediction-level validation
 
 ## Quick Inference
 
